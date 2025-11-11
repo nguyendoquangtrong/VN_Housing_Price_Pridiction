@@ -1,10 +1,10 @@
-# 🤖 Dự đoán Giá nhà Việt Nam (Hồi quy Đa thức)
+# Dự đoán Giá nhà Việt Nam (Hồi quy Đa thức)
 
 Dự án này là một mô hình Machine Learning được xây dựng từ đầu (from scratch) để dự đoán giá nhà tại Việt Nam, dựa trên bộ dữ liệu [Vietnam Housing Dataset 2024 từ Kaggle](https://www.kaggle.com/datasets/nguyentiennhan/vietnam-housing-dataset-2024).
 
 Mục tiêu của dự án là thực hành toàn bộ quy trình khoa học dữ liệu: từ làm sạch dữ liệu, kỹ thuật đặc trưng, đến việc tự xây dựng mô hình Hồi quy Ridge (L2) với các đặc trưng Đa thức (Polynomial Features) mà không dùng các thư viện "hộp đen" như `scikit-learn` cho chính mô hình.
 
-## 📊 Kết quả Cuối cùng
+## Kết quả Cuối cùng
 
 Mô hình tốt nhất (Hồi quy Ridge với `lambda=1` và đặc trưng đa thức bậc 2) đã được tinh chỉnh và đánh giá trên tập kiểm tra (test set).
 
@@ -17,7 +17,7 @@ Mô hình tốt nhất (Hồi quy Ridge với `lambda=1` và đặc trưng đa t
 | **MAE** | **1.1207 Tỷ VNĐ** | Trung bình, dự đoán của mô hình sai lệch khoảng 1.12 tỷ VNĐ. |
 | **MASE** | **0.6078** | Mô hình tốt hơn 1 / 0.6078 (≈ 1.65 lần) so với mô hình "ngây thơ". |
 
-## ✨ Các Kỹ thuật chính được áp dụng
+## Các Kỹ thuật chính được áp dụng
 
 * **Làm sạch Dữ liệu:** Xử lý `dtype('O')`, ép kiểu dữ liệu `(pd.to_numeric)`.
 * **Xử lý Dữ liệu thiếu:**
@@ -34,7 +34,7 @@ Mô hình tốt nhất (Hồi quy Ridge với `lambda=1` và đặc trưng đa t
     * **Hồi quy Ridge (L2 Regularization):** Thêm `lambda` (Hệ số Regularization) để chống lại Overfitting.
     * **Tinh chỉnh Siêu tham số:** Tự động chạy một vòng lặp (Grid Search) để tìm giá trị `lambda` tốt nhất.
 
-## 📁 Cấu trúc Thư mục
+## Cấu trúc Thư mục
 
 ```bash
 HousingProject/
